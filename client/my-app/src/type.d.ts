@@ -16,5 +16,4 @@ type ApiDataType = {
     status: string
     todos: ITodo[]
     todo?: ITodo
-  }
-  
+}

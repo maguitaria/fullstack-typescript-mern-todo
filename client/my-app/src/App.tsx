@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import TodoItem from './components/TodoItem'
-import AddTodo from './components/AddTodo'
+// import AddTodo from './components/AddTodo'
 import { getTodos, addTodo, updateTodo, deleteTodo } from './API'
 
 const App: React.FC = () => {
@@ -53,7 +53,7 @@ const App: React.FC = () => {
   return (
     <main className='App'>
       <h1>My Todos</h1>
-      <AddTodo saveTodo={handleSaveTodo} />
+      <TodoItem saveTodo={handleSaveTodo} />
       {todos.map((todo: ITodo) => (
         <TodoItem
           key={todo._id}
