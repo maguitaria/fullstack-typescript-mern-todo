@@ -13,7 +13,7 @@ app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(routes_1.default);
 // const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@clustertodo.raz9g.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
-const uri = 'mongodb+srv://user1:user1@atlascluster.rtquvey.mongodb.net/test';
+const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@atlascluster.rtquvey.mongodb.net/${process.env.MONGO_DB}`;
 mongoose_1.default
     .connect(uri)
     .then(() => app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`)))

@@ -8,8 +8,8 @@ export const getTodos = async (): Promise<AxiosResponse<ApiDataType>> => {
             baseUrl + '/todos'
         )
         return todos
-    } catch (error) {
-        throw new Error(error)
+    } catch (err) {
+        throw new Error("Error /todos")
     }
 }
 
@@ -27,8 +27,9 @@ export const addTodo = async (
             todo
         )
         return saveTodo
-    } catch (error) {
-        throw new Error(error)
+    } catch (err) {
+        throw new Error("Error /add-todo")
+
     }
 }
 
@@ -45,7 +46,7 @@ export const updateTodo = async (
         )
         return updatedTodo
     } catch (error) {
-        throw new Error(error)
+        throw new Error("Error /edit-todo")
     }
 }
 
@@ -58,6 +59,6 @@ export const deleteTodo = async (
         )
         return deletedTodo
     } catch (error) {
-        throw new Error(error)
+        throw new Error("Error /delete-todo")
     }
 }
